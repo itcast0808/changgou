@@ -7,6 +7,8 @@ import com.changgou.pojo.Admin;
 import com.github.pagehelper.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 @RestController
@@ -101,6 +103,21 @@ public class AdminController {
         Page<Admin> pageList = adminService.findPage(searchMap, page, size);
         PageResult pageResult=new PageResult(pageList.getTotal(),pageList.getResult());
         return new Result(true,StatusCode.OK,"查询成功",pageResult);
+    }
+
+
+    @PostMapping("/login")
+    public Result login(@RequestBody Admin admin){
+        boolean result = adminService.login(admin);
+        if (result){
+            //密码是正确的
+            //生成jwt令牌，返回到客户端
+            HashMap<String , String> info = new HashMap<>();
+            info.put("username",admin.getLoginName());
+            return new Result(true,StatusCode.OK,"登陆成功",info);
+        }else {
+            return new Result(false,StatusCode.ERROR,"登陆失败");
+        }
     }
 
 
