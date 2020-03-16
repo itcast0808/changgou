@@ -4,6 +4,7 @@ import com.changgou.entity.Result;
 import com.changgou.entity.StatusCode;
 import com.changgou.system.service.AdminService;
 import com.changgou.pojo.Admin;
+import com.changgou.system.util.JwtUtil;
 import com.github.pagehelper.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
+
 @RestController
 @CrossOrigin
 @RequestMapping("/admin")
@@ -114,6 +117,9 @@ public class AdminController {
             //生成jwt令牌，返回到客户端
             HashMap<String , String> info = new HashMap<>();
             info.put("username",admin.getLoginName());
+            //基于工具类生成jwt令牌
+            String jwt = JwtUtil.createJWT(UUID.randomUUID().toString(), admin.getLoginName(), null);
+            info.put("token",jwt);
             return new Result(true,StatusCode.OK,"登陆成功",info);
         }else {
             return new Result(false,StatusCode.ERROR,"登陆失败");
