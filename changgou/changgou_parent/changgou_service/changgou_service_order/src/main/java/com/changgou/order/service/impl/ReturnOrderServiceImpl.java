@@ -116,47 +116,47 @@ public class ReturnOrderServiceImpl implements ReturnOrderService {
             // 服务单号
             if(searchMap.get("id")!=null && !"".equals(searchMap.get("id"))){
                 criteria.andLike("id","%"+searchMap.get("id")+"%");
-           	}
+            }
             // 订单号
             if(searchMap.get("order_id")!=null && !"".equals(searchMap.get("order_id"))){
                 criteria.andLike("order_id","%"+searchMap.get("order_id")+"%");
-           	}
+            }
             // 用户账号
             if(searchMap.get("user_account")!=null && !"".equals(searchMap.get("user_account"))){
                 criteria.andLike("user_account","%"+searchMap.get("user_account")+"%");
-           	}
+            }
             // 联系人
             if(searchMap.get("linkman")!=null && !"".equals(searchMap.get("linkman"))){
                 criteria.andLike("linkman","%"+searchMap.get("linkman")+"%");
-           	}
+            }
             // 联系人手机
             if(searchMap.get("linkman_mobile")!=null && !"".equals(searchMap.get("linkman_mobile"))){
                 criteria.andLike("linkman_mobile","%"+searchMap.get("linkman_mobile")+"%");
-           	}
+            }
             // 类型
             if(searchMap.get("type")!=null && !"".equals(searchMap.get("type"))){
                 criteria.andLike("type","%"+searchMap.get("type")+"%");
-           	}
+            }
             // 是否退运费
             if(searchMap.get("is_return_freight")!=null && !"".equals(searchMap.get("is_return_freight"))){
                 criteria.andLike("is_return_freight","%"+searchMap.get("is_return_freight")+"%");
-           	}
+            }
             // 申请状态
             if(searchMap.get("status")!=null && !"".equals(searchMap.get("status"))){
                 criteria.andLike("status","%"+searchMap.get("status")+"%");
-           	}
+            }
             // 凭证图片
             if(searchMap.get("evidence")!=null && !"".equals(searchMap.get("evidence"))){
                 criteria.andLike("evidence","%"+searchMap.get("evidence")+"%");
-           	}
+            }
             // 问题描述
             if(searchMap.get("description")!=null && !"".equals(searchMap.get("description"))){
                 criteria.andLike("description","%"+searchMap.get("description")+"%");
-           	}
+            }
             // 处理备注
             if(searchMap.get("remark")!=null && !"".equals(searchMap.get("remark"))){
                 criteria.andLike("remark","%"+searchMap.get("remark")+"%");
-           	}
+            }
 
             // 退款金额
             if(searchMap.get("returnMoney")!=null ){

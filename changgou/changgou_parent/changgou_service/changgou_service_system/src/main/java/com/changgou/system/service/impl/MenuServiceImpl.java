@@ -1,8 +1,9 @@
 package com.changgou.system.service.impl;
 
 import com.changgou.system.dao.MenuMapper;
+import com.changgou.system.pojo.Menu;
 import com.changgou.system.service.MenuService;
-import com.changgou.pojo.Menu;
+
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -116,23 +117,23 @@ public class MenuServiceImpl implements MenuService {
             // 菜单ID
             if(searchMap.get("id")!=null && !"".equals(searchMap.get("id"))){
                 criteria.andLike("id","%"+searchMap.get("id")+"%");
-           	}
+            }
             // 菜单名称
             if(searchMap.get("name")!=null && !"".equals(searchMap.get("name"))){
                 criteria.andLike("name","%"+searchMap.get("name")+"%");
-           	}
+            }
             // 图标
             if(searchMap.get("icon")!=null && !"".equals(searchMap.get("icon"))){
                 criteria.andLike("icon","%"+searchMap.get("icon")+"%");
-           	}
+            }
             // URL
             if(searchMap.get("url")!=null && !"".equals(searchMap.get("url"))){
                 criteria.andLike("url","%"+searchMap.get("url")+"%");
-           	}
+            }
             // 上级菜单ID
             if(searchMap.get("parent_id")!=null && !"".equals(searchMap.get("parent_id"))){
                 criteria.andLike("parent_id","%"+searchMap.get("parent_id")+"%");
-           	}
+            }
 
 
         }

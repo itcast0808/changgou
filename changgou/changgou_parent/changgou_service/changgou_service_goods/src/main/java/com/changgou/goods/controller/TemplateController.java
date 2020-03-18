@@ -2,7 +2,6 @@ package com.changgou.goods.controller;
 import com.changgou.entity.PageResult;
 import com.changgou.entity.Result;
 import com.changgou.entity.StatusCode;
-import com.changgou.goods.service.TemplateService;
 import com.changgou.goods.pojo.Template;
 import com.github.pagehelper.Page;
 import org.springframework.beans.factory.annotation.Autowired;

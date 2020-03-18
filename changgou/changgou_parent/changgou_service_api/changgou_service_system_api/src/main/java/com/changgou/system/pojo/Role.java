@@ -1,4 +1,4 @@
-package com.changgou.pojo;
+package com.changgou.system.pojo;
 
 import javax.persistence.Id;
 import javax.persistence.Table;

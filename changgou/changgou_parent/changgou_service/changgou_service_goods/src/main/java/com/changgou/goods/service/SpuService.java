@@ -1,5 +1,6 @@
 package com.changgou.goods.service;
 
+import com.changgou.goods.pojo.Goods;
 import com.changgou.goods.pojo.Spu;
 import com.github.pagehelper.Page;
 
@@ -23,15 +24,15 @@ public interface SpuService {
 
     /***
      * 新增
-     * @param spu
+     * @param goods
      */
-    void add(Spu spu);
+    void add(Goods goods);
 
     /***
      * 修改
-     * @param spu
+     * @param goods
      */
-    void update(Spu spu);
+    void update(Goods goods);
 
     /***
      * 删除
@@ -63,7 +64,21 @@ public interface SpuService {
      */
     Page<Spu> findPage(Map<String, Object> searchMap, int page, int size);
 
+    Goods findGoodsById(String id);
 
+    //商品审核并自动上架
+    void audit(String id);
 
+    //商品下架
+    void pull(String id);
+
+    //商品上架
+    void put(String id);
+
+    //还原商品
+    void restore(String id);
+
+    //物理删除商品
+    void realDel(String id);
 
 }

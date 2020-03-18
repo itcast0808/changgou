@@ -104,19 +104,15 @@ public class SpecServiceImpl implements SpecService {
         return (Page<Spec>)specMapper.selectByExample(example);
     }
 
-    /*
-    * 根据品牌分类名称查询规格列表
-    * */
     @Override
     public List<Map> findSpecListByCategoryName(String categoryName) {
         List<Map> specList = specMapper.findSpecListByCategoryName(categoryName);
         for (Map map : specList) {
-            String[] options = ((String) map.get("option")).split(",");
-            map.put("option",options);
+            String[] options = ((String) map.get("options")).split(",");
+            map.put("options",options);
         }
         return specList;
     }
-
 
     /**
      * 构建查询对象
@@ -130,11 +126,11 @@ public class SpecServiceImpl implements SpecService {
             // 名称
             if(searchMap.get("name")!=null && !"".equals(searchMap.get("name"))){
                 criteria.andLike("name","%"+searchMap.get("name")+"%");
-           	}
+            }
             // 规格选项
             if(searchMap.get("options")!=null && !"".equals(searchMap.get("options"))){
                 criteria.andLike("options","%"+searchMap.get("options")+"%");
-           	}
+            }
 
             // ID
             if(searchMap.get("id")!=null ){

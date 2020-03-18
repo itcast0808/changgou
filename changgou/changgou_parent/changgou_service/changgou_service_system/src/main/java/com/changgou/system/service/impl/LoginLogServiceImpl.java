@@ -1,8 +1,9 @@
 package com.changgou.system.service.impl;
 
 import com.changgou.system.dao.LoginLogMapper;
+import com.changgou.system.pojo.LoginLog;
 import com.changgou.system.service.LoginLogService;
-import com.changgou.pojo.LoginLog;
+
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -116,19 +117,19 @@ public class LoginLogServiceImpl implements LoginLogService {
             // login_name
             if(searchMap.get("login_name")!=null && !"".equals(searchMap.get("login_name"))){
                 criteria.andLike("login_name","%"+searchMap.get("login_name")+"%");
-           	}
+            }
             // ip
             if(searchMap.get("ip")!=null && !"".equals(searchMap.get("ip"))){
                 criteria.andLike("ip","%"+searchMap.get("ip")+"%");
-           	}
+            }
             // browser_name
             if(searchMap.get("browser_name")!=null && !"".equals(searchMap.get("browser_name"))){
                 criteria.andLike("browser_name","%"+searchMap.get("browser_name")+"%");
-           	}
+            }
             // 地区
             if(searchMap.get("location")!=null && !"".equals(searchMap.get("location"))){
                 criteria.andLike("location","%"+searchMap.get("location")+"%");
-           	}
+            }
 
             // id
             if(searchMap.get("id")!=null ){

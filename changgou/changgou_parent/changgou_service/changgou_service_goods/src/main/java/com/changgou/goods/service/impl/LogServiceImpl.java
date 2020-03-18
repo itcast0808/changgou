@@ -116,11 +116,11 @@ public class LogServiceImpl implements LogService {
             // xid
             if(searchMap.get("xid")!=null && !"".equals(searchMap.get("xid"))){
                 criteria.andLike("xid","%"+searchMap.get("xid")+"%");
-           	}
+            }
             // ext
             if(searchMap.get("ext")!=null && !"".equals(searchMap.get("ext"))){
                 criteria.andLike("ext","%"+searchMap.get("ext")+"%");
-           	}
+            }
 
             // log_status
             if(searchMap.get("logStatus")!=null ){

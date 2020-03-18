@@ -6,7 +6,6 @@ import com.changgou.goods.service.SpecService;
 import com.changgou.goods.pojo.Spec;
 import com.github.pagehelper.Page;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
@@ -104,13 +103,9 @@ public class SpecController {
         return new Result(true,StatusCode.OK,"查询成功",pageResult);
     }
 
-    /*
-     * 根据品牌分类名称查询规格列表
-     * */
-    public Result<List<Map>> findSpecListByCategoryName(@Param("categoryName") String categoryName){
+    @GetMapping("/category/{categoryName}")
+    public Result<List<Map>> findSpecListByCategoryName(@PathVariable("categoryName") String categoryName){
         List<Map> specList = specService.findSpecListByCategoryName(categoryName);
         return new Result<>(true,StatusCode.OK,"查询成功",specList);
     }
-
-
 }

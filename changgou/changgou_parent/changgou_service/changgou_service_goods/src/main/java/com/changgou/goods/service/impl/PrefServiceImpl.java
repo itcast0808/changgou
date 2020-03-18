@@ -116,11 +116,11 @@ public class PrefServiceImpl implements PrefService {
             // 类型
             if(searchMap.get("type")!=null && !"".equals(searchMap.get("type"))){
                 criteria.andLike("type","%"+searchMap.get("type")+"%");
-           	}
+            }
             // 状态
             if(searchMap.get("state")!=null && !"".equals(searchMap.get("state"))){
                 criteria.andLike("state","%"+searchMap.get("state")+"%");
-           	}
+            }
 
             // ID
             if(searchMap.get("id")!=null ){

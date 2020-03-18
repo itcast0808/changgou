@@ -1,8 +1,8 @@
 package com.changgou.system.service.impl;
 
 import com.changgou.system.dao.RoleMapper;
+import com.changgou.system.pojo.Role;
 import com.changgou.system.service.RoleService;
-import com.changgou.pojo.Role;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -116,7 +116,7 @@ public class RoleServiceImpl implements RoleService {
             // 角色名称
             if(searchMap.get("name")!=null && !"".equals(searchMap.get("name"))){
                 criteria.andLike("name","%"+searchMap.get("name")+"%");
-           	}
+            }
 
             // ID
             if(searchMap.get("id")!=null ){

@@ -116,43 +116,43 @@ public class SkuServiceImpl implements SkuService {
             // 商品id
             if(searchMap.get("id")!=null && !"".equals(searchMap.get("id"))){
                 criteria.andEqualTo("id", searchMap.get("id"));
-           	}
+            }
             // 商品条码
             if(searchMap.get("sn")!=null && !"".equals(searchMap.get("sn"))){
                 criteria.andEqualTo("sn",searchMap.get("sn"));
-           	}
+            }
             // SKU名称
             if(searchMap.get("name")!=null && !"".equals(searchMap.get("name"))){
                 criteria.andLike("name","%"+searchMap.get("name")+"%");
-           	}
+            }
             // 商品图片
             if(searchMap.get("image")!=null && !"".equals(searchMap.get("image"))){
                 criteria.andLike("image","%"+searchMap.get("image")+"%");
-           	}
+            }
             // 商品图片列表
             if(searchMap.get("images")!=null && !"".equals(searchMap.get("images"))){
                 criteria.andLike("images","%"+searchMap.get("images")+"%");
-           	}
+            }
             // SPUID
             if(searchMap.get("spuId")!=null && !"".equals(searchMap.get("spuId"))){
                 criteria.andEqualTo("spuId",searchMap.get("spuId"));
-           	}
+            }
             // 类目名称
             if(searchMap.get("categoryName")!=null && !"".equals(searchMap.get("categoryName"))){
                 criteria.andLike("categoryName","%"+searchMap.get("categoryName")+"%");
-           	}
+            }
             // 品牌名称
             if(searchMap.get("brandName")!=null && !"".equals(searchMap.get("brandName"))){
                 criteria.andLike("brandName","%"+searchMap.get("brandName")+"%");
-           	}
+            }
             // 规格
             if(searchMap.get("spec")!=null && !"".equals(searchMap.get("spec"))){
                 criteria.andLike("spec","%"+searchMap.get("spec")+"%");
-           	}
+            }
             // 商品状态 1-正常，2-下架，3-删除
             if(searchMap.get("status")!=null && !"".equals(searchMap.get("status"))){
                 criteria.andEqualTo("status", searchMap.get("status"));
-           	}
+            }
 
             // 价格（分）
             if(searchMap.get("price")!=null ){

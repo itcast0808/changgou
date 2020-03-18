@@ -116,15 +116,15 @@ public class CategoryServiceImpl implements CategoryService {
             // 分类名称
             if(searchMap.get("name")!=null && !"".equals(searchMap.get("name"))){
                 criteria.andLike("name","%"+searchMap.get("name")+"%");
-           	}
+            }
             // 是否显示
             if(searchMap.get("isShow")!=null && !"".equals(searchMap.get("isShow"))){
                 criteria.andEqualTo("isShow",searchMap.get("isShow"));
-           	}
+            }
             // 是否导航
             if(searchMap.get("isMenu")!=null && !"".equals(searchMap.get("isMenu"))){
                 criteria.andLike("isMenu","%"+searchMap.get("isMenu")+"%");
-           	}
+            }
 
             // 分类ID
             if(searchMap.get("id")!=null ){

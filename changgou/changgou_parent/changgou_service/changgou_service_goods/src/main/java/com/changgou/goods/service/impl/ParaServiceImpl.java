@@ -116,11 +116,11 @@ public class ParaServiceImpl implements ParaService {
             // 名称
             if(searchMap.get("name")!=null && !"".equals(searchMap.get("name"))){
                 criteria.andLike("name","%"+searchMap.get("name")+"%");
-           	}
+            }
             // 选项
             if(searchMap.get("options")!=null && !"".equals(searchMap.get("options"))){
                 criteria.andLike("options","%"+searchMap.get("options")+"%");
-           	}
+            }
 
             // id
             if(searchMap.get("id")!=null ){

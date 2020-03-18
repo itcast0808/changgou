@@ -116,27 +116,27 @@ public class AdServiceImpl implements AdService {
             // 广告名称
             if(searchMap.get("name")!=null && !"".equals(searchMap.get("name"))){
                 criteria.andLike("name","%"+searchMap.get("name")+"%");
-           	}
+            }
             // 广告位置
             if(searchMap.get("position")!=null && !"".equals(searchMap.get("position"))){
                 criteria.andLike("position","%"+searchMap.get("position")+"%");
-           	}
+            }
             // 状态
             if(searchMap.get("status")!=null && !"".equals(searchMap.get("status"))){
                 criteria.andEqualTo("status", searchMap.get("status"));
-           	}
+            }
             // 图片地址
             if(searchMap.get("image")!=null && !"".equals(searchMap.get("image"))){
                 criteria.andLike("image","%"+searchMap.get("image")+"%");
-           	}
+            }
             // URL
             if(searchMap.get("url")!=null && !"".equals(searchMap.get("url"))){
                 criteria.andLike("url","%"+searchMap.get("url")+"%");
-           	}
+            }
             // 备注
             if(searchMap.get("remarks")!=null && !"".equals(searchMap.get("remarks"))){
                 criteria.andLike("remarks","%"+searchMap.get("remarks")+"%");
-           	}
+            }
 
             // ID
             if(searchMap.get("id")!=null ){

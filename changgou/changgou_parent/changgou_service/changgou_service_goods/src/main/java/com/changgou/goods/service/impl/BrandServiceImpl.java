@@ -122,15 +122,15 @@ public class BrandServiceImpl implements BrandService {
             // 品牌名称
             if(searchMap.get("name")!=null && !"".equals(searchMap.get("name"))){
                 criteria.andLike("name","%"+searchMap.get("name")+"%");
-           	}
+            }
             // 品牌图片地址
             if(searchMap.get("image")!=null && !"".equals(searchMap.get("image"))){
                 criteria.andLike("image","%"+searchMap.get("image")+"%");
-           	}
+            }
             // 品牌的首字母
             if(searchMap.get("letter")!=null && !"".equals(searchMap.get("letter"))){
                 criteria.andLike("letter","%"+searchMap.get("letter")+"%");
-           	}
+            }
 
             // 品牌id
             if(searchMap.get("id")!=null ){

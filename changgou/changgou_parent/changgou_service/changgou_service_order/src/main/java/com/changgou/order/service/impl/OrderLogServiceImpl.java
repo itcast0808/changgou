@@ -116,31 +116,31 @@ public class OrderLogServiceImpl implements OrderLogService {
             // ID
             if(searchMap.get("id")!=null && !"".equals(searchMap.get("id"))){
                 criteria.andLike("id","%"+searchMap.get("id")+"%");
-           	}
+            }
             // 操作员
             if(searchMap.get("operater")!=null && !"".equals(searchMap.get("operater"))){
                 criteria.andLike("operater","%"+searchMap.get("operater")+"%");
-           	}
+            }
             // 订单ID
             if(searchMap.get("order_id")!=null && !"".equals(searchMap.get("order_id"))){
                 criteria.andLike("order_id","%"+searchMap.get("order_id")+"%");
-           	}
+            }
             // 订单状态
             if(searchMap.get("order_status")!=null && !"".equals(searchMap.get("order_status"))){
                 criteria.andLike("order_status","%"+searchMap.get("order_status")+"%");
-           	}
+            }
             // 付款状态
             if(searchMap.get("pay_status")!=null && !"".equals(searchMap.get("pay_status"))){
                 criteria.andLike("pay_status","%"+searchMap.get("pay_status")+"%");
-           	}
+            }
             // 发货状态
             if(searchMap.get("consign_status")!=null && !"".equals(searchMap.get("consign_status"))){
                 criteria.andLike("consign_status","%"+searchMap.get("consign_status")+"%");
-           	}
+            }
             // 备注
             if(searchMap.get("remarks")!=null && !"".equals(searchMap.get("remarks"))){
                 criteria.andLike("remarks","%"+searchMap.get("remarks")+"%");
-           	}
+            }
 
 
         }

@@ -6,11 +6,7 @@ import com.changgou.goods.service.BrandService;
 import com.changgou.goods.pojo.Brand;
 import com.github.pagehelper.Page;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
-import tk.mybatis.mapper.common.Mapper;
-
-
 import java.util.List;
 import java.util.Map;
 @RestController
@@ -107,12 +103,9 @@ public class BrandController {
         return new Result(true,StatusCode.OK,"查询成功",pageResult);
     }
 
-
     @GetMapping("/category/{categoryName}")
     public Result<List<Map>> findBrandListByCategoryName(@PathVariable("categoryName")String categoryName){
         List<Map> brandList = brandService.findBrandListByCategoryName(categoryName);
         return new Result<>(true,StatusCode.OK,"查询成功",brandList);
     }
-
-
 }

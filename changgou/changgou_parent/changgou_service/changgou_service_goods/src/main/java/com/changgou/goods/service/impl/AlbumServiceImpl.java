@@ -116,15 +116,15 @@ public class AlbumServiceImpl implements AlbumService {
             // 相册名称
             if(searchMap.get("title")!=null && !"".equals(searchMap.get("title"))){
                 criteria.andLike("title","%"+searchMap.get("title")+"%");
-           	}
+            }
             // 相册封面
             if(searchMap.get("image")!=null && !"".equals(searchMap.get("image"))){
                 criteria.andLike("image","%"+searchMap.get("image")+"%");
-           	}
+            }
             // 图片列表
             if(searchMap.get("image_items")!=null && !"".equals(searchMap.get("image_items"))){
                 criteria.andLike("image_items","%"+searchMap.get("image_items")+"%");
-           	}
+            }
 
 
         }

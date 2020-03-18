@@ -1,8 +1,8 @@
 package com.changgou.system.service.impl;
 
 import com.changgou.system.dao.AdminMapper;
+import com.changgou.system.pojo.Admin;
 import com.changgou.system.service.AdminService;
-import com.changgou.pojo.Admin;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,7 +48,7 @@ public class AdminServiceImpl implements AdminService {
         //获取盐
         String gensalt = BCrypt.gensalt();
         //对用户的密码进行加密
-        String hashpw = BCrypt.hashpw(admin.getPassword(),gensalt);
+        String hashpw = BCrypt.hashpw(admin.getPassword(), gensalt);
         admin.setPassword(hashpw);
         adminMapper.insert(admin);
     }
@@ -117,12 +117,14 @@ public class AdminServiceImpl implements AdminService {
         admin1.setLoginName(admin.getLoginName());
         admin1.setStatus("1");
         Admin adminResult = adminMapper.selectOne(admin1);
+
         if (adminResult == null){
             return false;
-        }else {
+        }else{
             //对密码进行校验
             return BCrypt.checkpw(admin.getPassword(),adminResult.getPassword());
         }
+        //返回结果
     }
 
     /**
@@ -137,15 +139,15 @@ public class AdminServiceImpl implements AdminService {
             // 用户名
             if(searchMap.get("loginName")!=null && !"".equals(searchMap.get("loginName"))){
                 criteria.andLike("loginName","%"+searchMap.get("loginName")+"%");
-           	}
+            }
             // 密码
             if(searchMap.get("password")!=null && !"".equals(searchMap.get("password"))){
                 criteria.andLike("password","%"+searchMap.get("password")+"%");
-           	}
+            }
             // 状态
             if(searchMap.get("status")!=null && !"".equals(searchMap.get("status"))){
                 criteria.andEqualTo("status",searchMap.get("status"));
-           	}
+            }
 
             // id
             if(searchMap.get("id")!=null ){

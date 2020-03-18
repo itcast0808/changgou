@@ -1,5 +1,4 @@
 package com.changgou.system.util;
-import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -54,20 +53,5 @@ public class JwtUtil {
         byte[] encodedKey = Base64.getDecoder().decode(JwtUtil.JWT_KEY);
         SecretKey key = new SecretKeySpec(encodedKey, 0, encodedKey.length, "AES");
         return key;
-    }
-    
-    /**
-     * 解析
-     *
-     * @param jwt
-     * @return
-     * @throws Exception
-     */
-    public static Claims parseJWT(String jwt) throws Exception {
-        SecretKey secretKey = generalKey();
-        return Jwts.parser()
-                .setSigningKey(secretKey)
-                .parseClaimsJws(jwt)
-                .getBody();
     }
 }

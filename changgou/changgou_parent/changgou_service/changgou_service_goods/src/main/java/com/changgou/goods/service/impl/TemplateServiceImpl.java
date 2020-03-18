@@ -1,7 +1,6 @@
 package com.changgou.goods.service.impl;
 
 import com.changgou.goods.dao.TemplateMapper;
-import com.changgou.goods.service.TemplateService;
 import com.changgou.goods.pojo.Template;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -116,7 +115,7 @@ public class TemplateServiceImpl implements TemplateService {
             // 模板名称
             if(searchMap.get("name")!=null && !"".equals(searchMap.get("name"))){
                 criteria.andLike("name","%"+searchMap.get("name")+"%");
-           	}
+            }
 
             // ID
             if(searchMap.get("id")!=null ){

@@ -116,11 +116,11 @@ public class FreightTemplateServiceImpl implements FreightTemplateService {
             // 模板名称
             if(searchMap.get("name")!=null && !"".equals(searchMap.get("name"))){
                 criteria.andLike("name","%"+searchMap.get("name")+"%");
-           	}
+            }
             // 计费方式
             if(searchMap.get("type")!=null && !"".equals(searchMap.get("type"))){
                 criteria.andLike("type","%"+searchMap.get("type")+"%");
-           	}
+            }
 
             // ID
             if(searchMap.get("id")!=null ){

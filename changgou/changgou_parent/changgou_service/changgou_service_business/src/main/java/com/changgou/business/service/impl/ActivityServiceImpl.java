@@ -116,15 +116,15 @@ public class ActivityServiceImpl implements ActivityService {
             // 活动标题
             if(searchMap.get("title")!=null && !"".equals(searchMap.get("title"))){
                 criteria.andLike("title","%"+searchMap.get("title")+"%");
-           	}
+            }
             // 状态
             if(searchMap.get("status")!=null && !"".equals(searchMap.get("status"))){
                 criteria.andLike("status","%"+searchMap.get("status")+"%");
-           	}
+            }
             // 活动内容
             if(searchMap.get("content")!=null && !"".equals(searchMap.get("content"))){
                 criteria.andLike("content","%"+searchMap.get("content")+"%");
-           	}
+            }
 
             // ID
             if(searchMap.get("id")!=null ){

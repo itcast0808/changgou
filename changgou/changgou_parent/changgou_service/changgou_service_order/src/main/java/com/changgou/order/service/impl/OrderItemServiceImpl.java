@@ -116,31 +116,31 @@ public class OrderItemServiceImpl implements OrderItemService {
             // ID
             if(searchMap.get("id")!=null && !"".equals(searchMap.get("id"))){
                 criteria.andEqualTo("id",searchMap.get("id"));
-           	}
+            }
             // SPU_ID
             if(searchMap.get("spuId")!=null && !"".equals(searchMap.get("spuId"))){
                 criteria.andEqualTo("spuId",searchMap.get("spuId"));
-           	}
+            }
             // SKU_ID
             if(searchMap.get("skuId")!=null && !"".equals(searchMap.get("skuId"))){
                 criteria.andEqualTo("skuId",searchMap.get("skuId"));
-           	}
+            }
             // 订单ID
             if(searchMap.get("orderId")!=null && !"".equals(searchMap.get("orderId"))){
                 criteria.andEqualTo("orderId",searchMap.get("orderId"));
-           	}
+            }
             // 商品名称
             if(searchMap.get("name")!=null && !"".equals(searchMap.get("name"))){
                 criteria.andLike("name","%"+searchMap.get("name")+"%");
-           	}
+            }
             // 图片地址
             if(searchMap.get("image")!=null && !"".equals(searchMap.get("image"))){
                 criteria.andLike("image","%"+searchMap.get("image")+"%");
-           	}
+            }
             // 是否退货
             if(searchMap.get("isReturn")!=null && !"".equals(searchMap.get("isReturn"))){
                 criteria.andEqualTo("isReturn",searchMap.get("isReturn"));
-           	}
+            }
 
             // 1级分类
             if(searchMap.get("categoryId1")!=null ){

@@ -116,67 +116,67 @@ public class OrderServiceImpl implements OrderService {
             // 订单id
             if(searchMap.get("id")!=null && !"".equals(searchMap.get("id"))){
                 criteria.andEqualTo("id",searchMap.get("id"));
-           	}
+            }
             // 支付类型，1、在线支付、0 货到付款
             if(searchMap.get("payType")!=null && !"".equals(searchMap.get("payType"))){
                 criteria.andEqualTo("payType",searchMap.get("payType"));
-           	}
+            }
             // 物流名称
             if(searchMap.get("shippingName")!=null && !"".equals(searchMap.get("shippingName"))){
                 criteria.andLike("shippingName","%"+searchMap.get("shippingName")+"%");
-           	}
+            }
             // 物流单号
             if(searchMap.get("shippingCode")!=null && !"".equals(searchMap.get("shippingCode"))){
                 criteria.andLike("shippingCode","%"+searchMap.get("shippingCode")+"%");
-           	}
+            }
             // 用户名称
             if(searchMap.get("username")!=null && !"".equals(searchMap.get("username"))){
                 criteria.andLike("username","%"+searchMap.get("username")+"%");
-           	}
+            }
             // 买家留言
             if(searchMap.get("buyerMessage")!=null && !"".equals(searchMap.get("buyerMessage"))){
                 criteria.andLike("buyerMessage","%"+searchMap.get("buyerMessage")+"%");
-           	}
+            }
             // 是否评价
             if(searchMap.get("buyerRate")!=null && !"".equals(searchMap.get("buyerRate"))){
                 criteria.andLike("buyerRate","%"+searchMap.get("buyerRate")+"%");
-           	}
+            }
             // 收货人
             if(searchMap.get("receiverContact")!=null && !"".equals(searchMap.get("receiverContact"))){
                 criteria.andLike("receiverContact","%"+searchMap.get("receiverContact")+"%");
-           	}
+            }
             // 收货人手机
             if(searchMap.get("receiverMobile")!=null && !"".equals(searchMap.get("receiverMobile"))){
                 criteria.andLike("receiverMobile","%"+searchMap.get("receiverMobile")+"%");
-           	}
+            }
             // 收货人地址
             if(searchMap.get("receiverAddress")!=null && !"".equals(searchMap.get("receiverAddress"))){
                 criteria.andLike("receiverAddress","%"+searchMap.get("receiverAddress")+"%");
-           	}
+            }
             // 订单来源：1:web，2：app，3：微信公众号，4：微信小程序  5 H5手机页面
             if(searchMap.get("sourceType")!=null && !"".equals(searchMap.get("sourceType"))){
                 criteria.andEqualTo("sourceType",searchMap.get("sourceType"));
-           	}
+            }
             // 交易流水号
             if(searchMap.get("transactionId")!=null && !"".equals(searchMap.get("transactionId"))){
                 criteria.andLike("transactionId","%"+searchMap.get("transactionId")+"%");
-           	}
+            }
             // 订单状态
             if(searchMap.get("orderStatus")!=null && !"".equals(searchMap.get("orderStatus"))){
                 criteria.andEqualTo("orderStatus",searchMap.get("orderStatus"));
-           	}
+            }
             // 支付状态
             if(searchMap.get("payStatus")!=null && !"".equals(searchMap.get("payStatus"))){
                 criteria.andEqualTo("payStatus",searchMap.get("payStatus"));
-           	}
+            }
             // 发货状态
             if(searchMap.get("consignStatus")!=null && !"".equals(searchMap.get("consignStatus"))){
                 criteria.andEqualTo("consignStatus",searchMap.get("consignStatus"));
-           	}
+            }
             // 是否删除
             if(searchMap.get("isDelete")!=null && !"".equals(searchMap.get("isDelete"))){
                 criteria.andEqualTo("isDelete",searchMap.get("isDelete"));
-           	}
+            }
 
             // 数量合计
             if(searchMap.get("totalNum")!=null ){

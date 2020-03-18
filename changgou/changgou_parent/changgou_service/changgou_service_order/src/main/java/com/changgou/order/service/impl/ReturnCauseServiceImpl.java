@@ -116,11 +116,11 @@ public class ReturnCauseServiceImpl implements ReturnCauseService {
             // 原因
             if(searchMap.get("cause")!=null && !"".equals(searchMap.get("cause"))){
                 criteria.andLike("cause","%"+searchMap.get("cause")+"%");
-           	}
+            }
             // 是否启用
             if(searchMap.get("status")!=null && !"".equals(searchMap.get("status"))){
                 criteria.andLike("status","%"+searchMap.get("status")+"%");
-           	}
+            }
 
             // ID
             if(searchMap.get("id")!=null ){

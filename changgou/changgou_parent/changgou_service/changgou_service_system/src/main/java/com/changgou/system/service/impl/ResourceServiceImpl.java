@@ -1,9 +1,8 @@
 package com.changgou.system.service.impl;
 
 import com.changgou.system.dao.ResourceMapper;
-
+import com.changgou.system.pojo.Resource;
 import com.changgou.system.service.ResourceService;
-import com.changgou.pojo.Resource;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -117,11 +116,11 @@ public class ResourceServiceImpl implements ResourceService {
             // res_key
             if(searchMap.get("res_key")!=null && !"".equals(searchMap.get("res_key"))){
                 criteria.andLike("res_key","%"+searchMap.get("res_key")+"%");
-           	}
+            }
             // res_name
             if(searchMap.get("res_name")!=null && !"".equals(searchMap.get("res_name"))){
                 criteria.andLike("res_name","%"+searchMap.get("res_name")+"%");
-           	}
+            }
 
             // id
             if(searchMap.get("id")!=null ){

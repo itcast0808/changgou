@@ -116,11 +116,11 @@ public class PreferentialServiceImpl implements PreferentialService {
             // 状态
             if(searchMap.get("state")!=null && !"".equals(searchMap.get("state"))){
                 criteria.andLike("state","%"+searchMap.get("state")+"%");
-           	}
+            }
             // 类型1不翻倍 2翻倍
             if(searchMap.get("type")!=null && !"".equals(searchMap.get("type"))){
                 criteria.andLike("type","%"+searchMap.get("type")+"%");
-           	}
+            }
 
             // ID
             if(searchMap.get("id")!=null ){

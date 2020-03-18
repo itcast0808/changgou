@@ -1,9 +1,7 @@
 package com.changgou.goods.service;
 
-import com.changgou.entity.Result;
 import com.changgou.goods.pojo.Spec;
 import com.github.pagehelper.Page;
-import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -65,10 +63,6 @@ public interface SpecService {
      */
     Page<Spec> findPage(Map<String, Object> searchMap, int page, int size);
 
-
-    /*
-     * 根据品牌分类名称查询规格列表
-     * */
     List<Map> findSpecListByCategoryName(String categoryName);
 
 
